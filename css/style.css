@@ -1,0 +1,1002 @@
+@import url( https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap);     
+
+/* 
+==============================
+simple scroll bar
+================================*/
+
+::-webkit-scrollbar {
+    width: 13px;
+}
+
+::-webkit-scrollbar-track {
+    width: 13px;
+    background: #58595a;
+    border-left: 0 solid white;
+    border-right: 0 solid white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: goldenrod;
+    width: 0;
+    height: 35%;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+
+/*===========================
+global styles 
+===========================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    line-height: 1.5;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #252837;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.text-primary {
+    color: goldenrod !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+ol,
+ul {
+    padding-left: 2rem;
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem !important;
+}
+
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.mb-5 {
+    margin-bottom: 3rem !important;
+}
+
+.pb-5 {
+    padding-bottom: 3rem!important;
+}
+
+.mt-5 {
+    margin-top: 3rem !important;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #dee2e6!important;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5{
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+}
+.logo {
+    font-family: "Roboto", sans-serif;
+    font-size: medium;
+}
+
+
+/* header in some sections */
+
+.t-center {
+    text-align: center;
+}
+
+.t-head {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.s-head {
+    color: #100d0d;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: block;
+    width: 100%;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =======================================
+header in the pages 
+
+
+
+
+=====================================*/
+
+.header.header-contact-page .head-img,
+.header.header-home .head-img,
+.header.header-about-page .head-img,
+.header.header-projects-page .head-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+}
+
+.header.header-contact-page .container>.head-text,
+.header.header-home .container>.head-text,
+.header.header-services-page .container>.head-text,
+.header.header-about-page .container>.head-text,
+.header.header-projects-page .container>.head-text {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 50%;
+    flex-direction: column;
+}
+
+
+/*===========================
+nav
+===========================*/
+
+nav {
+    position: fixed;
+    padding: 20px 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: beige;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
+}
+
+nav .logo {
+    flex: 100%;
+    max-width: 100%;
+    padding: 0 0 0 10px;
+}
+
+nav .row {
+    align-items: center;
+}
+
+nav .nav-links {
+    flex: 60%;
+    max-width: 100%;
+    padding: 0 0 0 500px;
+    
+}
+
+nav .nav-num {
+    flex: 80%;
+    max-width: 100%;
+    padding: 0 0 0 700px;
+    
+}
+
+nav .logo a {
+    font-size: 20px;
+    color: #252837;
+    font-weight: 700;
+}
+
+nav .nav-links li {
+    display: inline-block;
+}
+
+nav .nav-links li a {
+    font-size: 14px;
+    padding: 10px 15px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+nav .nav-links li a.active,
+nav .nav-links li a:hover {
+    color: goldenrod;
+}
+
+
+/* pars  navbar*/
+
+.fa-phone {
+    margin-right: 10px;
+    transform: rotate( 90deg);
+}
+
+nav .fa-bars,
+nav .fa-times {
+    display: none;
+}
+
+
+/*===========================
+section hero or header
+============================= */
+
+.header {
+    position: relative;
+}
+
+.header.header-home .head-img {
+    background-image: url(../images/home.jpg);
+    left: 0;
+}
+
+.header.header-home .container>.head-text {
+    right: 0;
+    margin-left: auto;
+    padding: 0 90px;
+}
+
+.header .head-text .head-desc {
+    color: rgba(0, 0, 0, 0.5) !important;
+    margin-bottom: 3rem;
+    line-height: 2;
+    letter-spacing: 1.1px;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn.btn-primary {
+    background-color:goldenrod;
+    color: #fff;
+    border: 2px solid transparent;
+    padding: 12px 20px;
+    transition: 0.5s;
+}
+
+.btn.btn-primary:hover {
+    border: 2px solid transparent;
+    background-color: #fff;
+    color: goldenrod;
+    box-shadow: 0 15px 30px 0 rgb(0 0 0 / 20%);
+}
+
+.head-text .link {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.head-text .link a,
+.head-text .link i {
+    margin-right: 1rem !important;
+}
+
+.head-text .link a:nth-child(2) {
+    color: goldenrod;
+    margin: 1rem 0;
+}
+
+
+/*============================
+====   start services 
+==============================*/
+
+.services {
+    margin: 90px 0;
+}
+
+.services .services-content {
+    padding: 15px 24px;
+    margin: 40px 10px;
+    transition: 0.5s;
+}
+
+.ltr-effect {
+    position: relative;
+    text-align: center;
+}
+
+.ltr-effect:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: rgb(255, 255, 255);
+}
+
+.ltr-effect:after {
+    width: 0%;
+    transition: 0.5s ease-in-out;
+}
+
+.ltr-effect.active::after,
+.ltr-effect:hover:after {
+    width: 100%;
+    box-shadow: 0 0px 10px 0 rgb(0 0 0 / 20%);
+}
+
+.services-content img {
+    margin-bottom: 20px;
+    width: 80px;
+}
+
+.services .serv-content-head,
+.committed .com-content-head {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.services .serv-content-desc,
+.committed .com-content-desc {
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+    line-height: 21px;
+}
+
+.learn-btn i {
+    padding: 6px;
+    transition: 0.5s;
+}
+
+.learn-btn a:hover i {
+    background-color: goldenrod;
+    color: #fff;
+}
+
+
+/*============================
+====   start projects 
+==============================*/
+
+.projects {
+    padding: 7rem 0;
+}
+
+.projects .projects-content {
+    margin: 4px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.projects .image-desc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 3;
+}
+
+.projects .image-desc,
+.projects .projects-content>a::before {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s all ease;
+}
+
+.projects .projects-content>a::before {
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.projects .projects-content:hover .image-desc,
+.projects .projects-content>a:hover:before {
+    visibility: visible;
+    opacity: 1;
+}
+
+.projects .projects-content img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    transition: .5s all ease;
+    transform: scale(1);
+}
+
+
+.projects .projects-content>a:hover img {
+    transform: scale(1.05);
+}
+
+.projects .image-desc h4 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
+
+.projects .image-desc p {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.projects .link {
+    margin: 3rem auto;
+}
+
+
+/* start testmonials */
+
+.testmonials {
+    padding: 70px 0;
+}
+
+.testmonials-content {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background: #fff;
+    border-radius: 7px;
+    margin: 0 12px 30px;
+}
+
+.testmonials-content img {
+    width: 50px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.testmonials-content h4 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+
+.testmonials-content .author>* {
+    display: inline-block;
+}
+
+.testmonials-content blockquote {
+    line-height: 1.7;
+    font-style: italic;
+    margin: 0 0 25px 0;
+    font-size: 16px;
+}
+
+
+/* start committed */
+
+.committed {
+    padding: 7rem 0;
+}
+
+.committed .row:nth-child(1) {
+    justify-content: space-between;
+}
+
+.committed .col-lg-4 {
+    align-self: center!important;
+}
+
+.committed .head {
+    padding: 0 12px;
+}
+
+.committed .com-image img {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    vertical-align: middle;
+}
+
+.committed .com-image {
+    position: relative;
+    display: block;
+}
+
+.committed .com-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, .5);
+}
+
+.committed .com-image i {
+    position: absolute;
+    z-index: 9;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    color: goldenrod;
+}
+
+.committed .head-text {
+    line-height: 1.8
+}
+
+.committed .com-content {
+    display: flex;
+    align-items: flex-start;
+    padding: 1.5rem;
+}
+
+.committed .com-content img {
+    flex: 0 0 50px;
+    margin-right: 30px;
+    max-width: 50px;
+}
+
+
+/* start footer */
+
+footer {
+    padding-top: 70px;
+    padding-bottom: 30px;
+    background-color: beige;
+}
+
+footer .row:nth-child(1) {
+    justify-content: space-between;
+}
+
+footer .widget {
+    margin-bottom: 30px;
+}
+
+footer .line-top {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+
+/* social links footer */
+
+.social-2 li,
+.social li {
+    display: inline-block;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.social-2 li a,
+.social li a {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+    color: black;
+    border-radius: 50%;
+    background: rgb(248, 249, 250);
+    transition: .5s all ease;
+    margin: 0 3px;
+}
+
+.social-2 li a i,
+.social li a i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s all ease;
+}
+
+.social-2 li a:hover i,
+.social li a:hover i {
+    color: #fff;
+}
+
+.social-2 li a:hover,
+.social li a:hover {
+    background: goldenrod;
+}
+
+.social-2 li a {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+}
+
+
+/* links footer */
+
+footer .footer-links li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+footer .footer-links li a {
+    color: #000;
+    transition: color .3s ease;
+}
+
+footer .footer-links li:hover a {
+    color: goldenrod;
+}
+
+footer .row:nth-child(2) .col-lg-4 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.copyright {
+    justify-content: center;
+    letter-spacing: 2;
+}
+
+.copyright .small a {
+    color: goldenrod;
+    font-weight: bold;
+}
+
+
+/* ====================================
+==================================
+
+Projects  page
+
+======================
+==============================
+*/
+
+.projects-page .row:nth-child(1) .col-lg-4 {
+    padding: 0 12px;
+}
+
+.header.header-projects-page .container>.head-text {
+    right: 0;
+    margin-right: auto;
+    padding: 0 40px;
+}
+
+.header.header-projects-page .head-img {
+    background-image: url(../images/projects/2-full.jpg);
+    right: 0;
+}
+
+.projects-page .project-text {
+    line-height: 1.8;
+    color: #00000080;
+}
+
+
+/* =======================================
+==========================================
+START SERVICES PAGE
+=========================================
+====================================
+*/
+
+.header.header-services-page {
+    background-image: linear-gradient(to bottom, rgba(201, 195, 195, 0.493), rgb(0 0 0 / 70%)), url(../images/projects/image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header.header-services-page .container>.head-text {
+    right: 0;
+    text-align: center;
+    padding: 0 40px;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    position: relative;
+}
+
+.header.header.header-services-page .head-text .head-desc {
+    color: rgb(232, 231, 231, .8) !important;
+}
+
+.header.header.header-services-page .head-text .t-head {
+    color: #eee;
+}
+
+
+/* =======================================
+==========================================
+START ABOUT PAGE
+=========================================
+====================================
+*/
+
+.header.header-about-page .container>.head-text {
+    right: 0;
+    margin-right: auto;
+    padding: 0 40px;
+}
+
+.header.header-about-page .head-img {
+    background-image: url(../images/projects/4-full.jpg);
+    right: 0;
+}
+
+
+/* section about-us in page about */
+
+.about-us {
+    padding: 7rem 0;
+}
+
+.about-us .row {
+    justify-content: space-between !important;
+}
+
+.about-us .about-us-img img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.about-desc-head {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.about-us-desc {
+    padding: 12px 0;
+}
+
+.about-us-desc p {
+    line-height: 2;
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.about-us-desc .counter .countup {
+    font-size: 20px;
+}
+
+.about-us-desc .counter .text-black-50 {
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+
+
+/* start team in page about */
+
+.team {
+    padding: 5rem 0;
+}
+
+.team .row.items-end {
+    align-items: flex-end;
+}
+
+.team .person {
+    text-align: center;
+    margin: 0 5px;
+}
+
+.team .row.items-end .team-text {
+    line-height: 1.7;
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.team .person img {
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid goldenrod;
+    transition: .5s ease;
+}
+
+.team .person img:hover {
+    transform: rotateY(360deg);
+}
+
+.team .person span {
+    display: block;
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.team .person p {
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+
+
+/* start provide */
+
+.provide .row {
+    justify-content: space-between;
+}
+
+.provide .row>.col-lg-5 {
+    padding: 0px 12px;
+}
+
+.provide .com-content-head {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.provide .com-content-desc {
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+    line-height: 21px;
+}
+
+.provide .com-content {
+    display: flex;
+    align-items: flex-start;
+    padding: 1.5rem;
+}
+
+.provide .com-content img {
+    flex: 0 0 50px;
+    margin-right: 30px;
+    max-width: 50px;
+}
+
+
+/* =======================================
+==========================================
+START CONTACT PAGE
+=========================================
+====================================
+*/
+
+.contact {
+    padding: 7rem 0;
+}
+
+.header.header-contact-page .container>.head-text {
+    right: 0;
+    margin-right: auto;
+    padding: 0 40px;
+}
+
+.header.header-contact-page .head-img {
+    background-image: url(../images/projects/img_6.jpg);
+    right: 0;
+}
+
+.contact .j-center {
+    justify-content: center;
+}
+
+.contact .form-control {
+    background-color: #f8f9fa;
+    border: none;
+    border-radius: 30px;
+    height: 54px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-color: #adb5bd;
+    outline: none;
+}
+
+#map{
+    inline-size: 100%;
+    block-size: 70vh;
+    margin-block-end: 8vw;
+  }
+  #map iframe{
+    inline-size: 100%;
+    block-size: 100%;
+  }
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.contact textarea {
+    height: auto !important;
+    border-radius: 7px !important;
+}
+
+.contact textarea {
+    height: auto !important;
+    border-radius: 7px !important;
+}
+
+textarea.form-control {
+    min-height: calc(1.5em + 0.75rem + 2px);
+}
+
+.form-control:focus {
+    border: 1px solid #adb5bd;
+}
+
+label {
+    padding-left: 1rem !important;
+}
+
+.contact .col-lg-6,
+.contact .col-lg-12 {
+    padding: 0 20px;
+}
